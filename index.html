@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>NeoForge · Estudio de videojuegos</title>
+<meta name="description" content="NeoForge es un estudio independiente de videojuegos con motor propio, Forja Engine. Valencia y Madrid.">
+<meta name="theme-color" content="#06080b">
+<meta property="og:title" content="NeoForge · Estudio de videojuegos">
+<meta property="og:description" content="NeoForge es un estudio independiente de videojuegos con motor propio, Forja Engine. Valencia y Madrid.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2306080b'/%3E%3Cpath d='M16 3 28 10v12L16 29 4 22V10Z' fill='none' stroke='%23ff5a1f' stroke-width='2'/%3E%3Cpath d='M10 20v-7l6 4.5 6-4.5v7' fill='none' stroke='%2336e2ff' stroke-width='2.2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="inicio">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site">
+  <div class="bar">
+    <a class="logo" href="index.html" aria-label="NeoForge, ir al inicio"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 29 9.5v13L16 30 3 22.5v-13Z" fill="none" stroke="#ff5a1f" stroke-width="2"/><path d="M9 20V12l7 5 7-5v8" fill="none" stroke="#36e2ff" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="17" r="1.8" fill="#ffae2b"/></svg>NEO<span>FORGE</span></a>
+    <nav class="main" id="nav" aria-label="Principal">
+      <a href="index.html" data-page="inicio">inicio</a>
+      <a href="quienes-somos.html" data-page="nosotros">quiénes_somos</a>
+      <a href="proyectos.html" data-page="proyectos">proyectos</a>
+      <a href="contacto.html" data-page="contacto">contacto</a>
+    </nav>
+    <button class="hbtn" type="button" data-open-console aria-label="Abrir consola"><span class="lab">consola</span><kbd>º</kbd></button>
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="contenido">
+<section class="band"><div class="wrap hero">
+  <div class="hero-t">
+    <p class="prompt">neoforge@studio<b>:~$</b> ./forjar --mundo nuevo</p>
+    <h1><span class="glitch" data-t="Forjamos los mundos">Forjamos los mundos</span> que vas a jugar mañana.</h1>
+    <p class="lead" style="margin-top:22px">NeoForge es un estudio independiente de desarrollo de videojuegos. Diseñamos, programamos y lanzamos juegos para PC y consola con nuestro propio motor, Forja Engine.</p>
+    <div class="btns">
+      <a class="btn main" href="proyectos.html">Ver proyectos →</a>
+      <a class="btn" href="contacto.html">Trabaja con nosotros</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b data-n="10">10</b><span>años forjando</span></div>
+      <div class="stat"><b data-n="5">5</b><span>juegos publicados o en camino</span></div>
+      <div class="stat"><b data-n="140">140</b><span>personas en el equipo</span></div>
+      <div class="stat"><b data-n="12" data-s="M">12M</b><span>jugadores</span></div>
+    </div>
+  </div>
+  <div class="stage">
+    <canvas id="forge" aria-label="Lingote de alambre girando sobre una rejilla con chispas. Arrástralo para girarlo."></canvas>
+    <div class="hud"><span>FORJA_ENGINE v4.2 · <b id="fps">60</b> fps</span><span>render: <b>tiempo real</b></span></div>
+    <span class="hint">arrastra para girar ↻</span>
+    <div class="term" aria-hidden="true">
+      <div class="term-h"><i></i><i></i><i></i><span>neoforge — build</span></div>
+      <div class="term-b" id="tb"></div>
+    </div>
+  </div>
+</div></section>
+
+<div class="marq" aria-hidden="true"><div class="marq-in" id="marq"></div></div>
+
+<section class="band"><div class="wrap">
+  <div class="head">
+    <div><p class="prompt">cat servicios.txt</p><h2>Qué hacemos</h2></div>
+    <p class="sub">Del primer prototipo al parche del día uno. Un solo equipo cubre todo el ciclo, así que cada decisión técnica sirve a lo que se siente al jugar.</p>
+  </div>
+  <div class="grid4" id="svc"></div>
+</div></section>
+
+<section class="band alt"><div class="wrap">
+  <div class="launch">
+    <div class="cover" id="launch-cover"></div>
+    <div class="launch-b">
+      <p class="prompt">countdown --abisal</p>
+      <h2 style="margin-bottom:10px">ABISAL llega el 12 de marzo de 2027</h2>
+      <p class="sub" style="margin:0">Desciende 11 000 metros en una fosa oceánica viva. Disponible en PC, PS5 y Switch 2.</p>
+      <div class="count" id="countdown" aria-live="off"></div>
+      <div class="btns" style="margin-top:18px"><a class="btn main" href="proyectos.html#abisal">Ver ficha del juego →</a></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="head">
+    <div><p class="prompt">ls ./destacados</p><h2>Proyectos destacados</h2></div>
+    <p class="sub">Tres de nuestros títulos. Pulsa en cualquiera para ver plataformas, motor, características y estado del desarrollo.</p>
+  </div>
+  <div class="grid3" id="feat"></div>
+  <div class="btns"><a class="btn" href="proyectos.html">Ver los 6 proyectos →</a></div>
+</div></section>
+
+<section class="band alt"><div class="wrap engine">
+  <div>
+    <p class="prompt">forja --benchmark</p>
+    <h2>Forja Engine: nuestro motor, nuestras reglas</h2>
+    <p class="sub">Escrito en C++20 y Vulkan por nuestro equipo de Madrid. Lo usamos en todos nuestros juegos y lo ajustamos a cada uno, sin depender de licencias externas.</p>
+    <pre class="code" style="margin-top:22px"><span class="c">// un sistema de chispas en Forja</span>
+<span class="k">auto</span> chispas = mundo.<span class="n">crear</span>&lt;Emisor&gt;({
+  .tasa     = <span class="n">4000</span>,
+  .color    = <span class="s">"#ff5a1f"</span>,
+  .gravedad = <span class="n">-9.8f</span>
+});</pre>
+  </div>
+  <div>
+    <div class="box" style="padding:26px">
+      <p class="lbl" style="margin-bottom:20px"><span>rendimiento medido en la build 4.2</span><span style="color:var(--ok)">● estable</span></p>
+      <div class="bench" id="bench"></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="head">
+    <div><p class="prompt">tail -n 3 diario.log</p><h2>Diario de desarrollo</h2></div>
+    <p class="sub">Lo que estamos construyendo, contado por los equipos que lo construyen.</p>
+  </div>
+  <div class="news" id="news"></div>
+</div></section>
+
+<section class="band" style="padding-top:0"><div class="wrap cta">
+  <div>
+    <h2>¿Tienes una idea que merece un mundo?</h2>
+    <p>Hacemos co-desarrollo, ports y producción completa. Cuéntanos tu proyecto y te respondemos en 48 horas laborables.</p>
+    <form class="news-form" id="newsform" novalidate>
+      <label for="nemail" class="lbl" style="flex-basis:100%">o recibe el boletín mensual del estudio</label>
+      <input id="nemail" type="email" placeholder="tu@email.com" autocomplete="email">
+      <button class="btn sm" type="submit">Suscribirme</button>
+      <span id="nmsg" class="mono" style="flex-basis:100%;font-size:13px" aria-live="polite"></span>
+    </form>
+  </div>
+  <a class="btn main" href="contacto.html">Iniciar conversación →</a>
+</div></section>
+</main>
+
+<footer class="site band"><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <a class="logo" href="index.html" style="font-size:22px"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 29 9.5v13L16 30 3 22.5v-13Z" fill="none" stroke="#ff5a1f" stroke-width="2"/><path d="M9 20V12l7 5 7-5v8" fill="none" stroke="#36e2ff" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="17" r="1.8" fill="#ffae2b"/></svg>NEO<span>FORGE</span></a>
+      <p class="sub" style="margin-top:14px;font-size:15px">Estudio independiente de videojuegos con motor propio. Valencia y Madrid.</p>
+      <p class="status" style="margin-top:6px"><i class="dot"></i>todos los servidores en línea</p>
+    </div>
+    <div><h4>estudio</h4><a href="quienes-somos.html">Quiénes somos</a><a href="quienes-somos.html#equipo">Equipo</a><a href="quienes-somos.html#empleo">Empleo</a></div>
+    <div><h4>juegos</h4><a href="proyectos.html">Todos los proyectos</a><a href="proyectos.html#forja">Forja Engine</a><a href="proyectos.html#nyx">NYX PROTOCOL</a></div>
+    <div><h4>contacto</h4><a href="contacto.html">Escríbenos</a><a href="contacto.html#empleo">Enviar candidatura</a><a href="contacto.html#faq">Preguntas frecuentes</a></div>
+  </div>
+  <div class="fine"><span>© 2026 NeoForge Studio S.L. · Pulsa º para abrir la consola</span><span>Empresa, juegos y datos ficticios con fines de demostración.</span></div>
+</div></footer>
+
+<button class="totop" type="button" aria-label="Volver arriba">↑</button>
+<button class="fab" type="button" aria-label="Abrir consola de comandos" aria-expanded="false" aria-controls="console">&gt;_</button>
+<div class="console" id="console" hidden role="dialog" aria-label="Consola de NeoForge">
+  <div class="term-h"><i></i><i></i><i></i><span>neoforge — shell</span><button id="con-x" type="button" aria-label="Cerrar consola">×</button></div>
+  <div class="con-out" id="con-out" aria-live="polite"></div>
+  <form class="con-in" id="con-form" autocomplete="off"><span>~$</span><input id="con-in" aria-label="Comando" placeholder="escribe help" spellcheck="false" autocapitalize="off"></form>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
