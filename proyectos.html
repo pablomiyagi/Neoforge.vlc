@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Proyectos · NeoForge</title>
+<meta name="description" content="Juegos lanzados, en desarrollo y la tecnología de NeoForge.">
+<meta name="theme-color" content="#06080b">
+<meta property="og:title" content="Proyectos · NeoForge">
+<meta property="og:description" content="Juegos lanzados, en desarrollo y la tecnología de NeoForge.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2306080b'/%3E%3Cpath d='M16 3 28 10v12L16 29 4 22V10Z' fill='none' stroke='%23ff5a1f' stroke-width='2'/%3E%3Cpath d='M10 20v-7l6 4.5 6-4.5v7' fill='none' stroke='%2336e2ff' stroke-width='2.2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="proyectos">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site">
+  <div class="bar">
+    <a class="logo" href="index.html" aria-label="NeoForge, ir al inicio"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 29 9.5v13L16 30 3 22.5v-13Z" fill="none" stroke="#ff5a1f" stroke-width="2"/><path d="M9 20V12l7 5 7-5v8" fill="none" stroke="#36e2ff" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="17" r="1.8" fill="#ffae2b"/></svg>NEO<span>FORGE</span></a>
+    <nav class="main" id="nav" aria-label="Principal">
+      <a href="index.html" data-page="inicio">inicio</a>
+      <a href="quienes-somos.html" data-page="nosotros">quiénes_somos</a>
+      <a href="proyectos.html" data-page="proyectos">proyectos</a>
+      <a href="contacto.html" data-page="contacto">contacto</a>
+    </nav>
+    <button class="hbtn" type="button" data-open-console aria-label="Abrir consola"><span class="lab">consola</span><kbd>º</kbd></button>
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="contenido">
+<section class="band"><div class="wrap">
+  <div class="head">
+    <div><p class="prompt">find ./proyectos -type juego</p><h1 class="page-t" data-scramble>Proyectos</h1></div>
+    <p class="sub">Juegos lanzados, títulos en desarrollo y la tecnología que lo hace posible. Filtra, busca y abre cualquier ficha; con las flechas del teclado pasas de una a otra.</p>
+  </div>
+  <div class="tools">
+    <div class="chips" id="chips" role="group" aria-label="Filtrar por estado"></div>
+    <label class="search"><span class="lbl" hidden>Buscar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="q" type="search" placeholder="Buscar por nombre, género o plataforma" aria-label="Buscar proyectos"></label>
+  </div>
+  <div class="grid3" id="plist" aria-live="polite"></div>
+</div></section>
+
+<section class="band alt"><div class="wrap split">
+  <div>
+    <p class="prompt">cat pipeline.log</p>
+    <h2>De idea a lanzamiento</h2>
+    <p class="sub">Así pasa un proyecto por el estudio. Cada fase termina con una build jugable que revisa todo el equipo, y solo avanza si es divertida.</p>
+  </div>
+  <div id="pipe"></div>
+</div></section>
+
+<section class="band"><div class="wrap cta">
+  <div><h2>¿Quieres probar nuestros juegos antes que nadie?</h2><p>Abrimos betas cerradas de cada proyecto en desarrollo. Escríbenos con el motivo "Otro" y te avisamos.</p></div>
+  <a class="btn main" href="contacto.html">Apuntarme a la beta →</a>
+</div></section>
+</main>
+
+<footer class="site band"><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <a class="logo" href="index.html" style="font-size:22px"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 29 9.5v13L16 30 3 22.5v-13Z" fill="none" stroke="#ff5a1f" stroke-width="2"/><path d="M9 20V12l7 5 7-5v8" fill="none" stroke="#36e2ff" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="17" r="1.8" fill="#ffae2b"/></svg>NEO<span>FORGE</span></a>
+      <p class="sub" style="margin-top:14px;font-size:15px">Estudio independiente de videojuegos con motor propio. Valencia y Madrid.</p>
+      <p class="status" style="margin-top:6px"><i class="dot"></i>todos los servidores en línea</p>
+    </div>
+    <div><h4>estudio</h4><a href="quienes-somos.html">Quiénes somos</a><a href="quienes-somos.html#equipo">Equipo</a><a href="quienes-somos.html#empleo">Empleo</a></div>
+    <div><h4>juegos</h4><a href="proyectos.html">Todos los proyectos</a><a href="proyectos.html#forja">Forja Engine</a><a href="proyectos.html#nyx">NYX PROTOCOL</a></div>
+    <div><h4>contacto</h4><a href="contacto.html">Escríbenos</a><a href="contacto.html#empleo">Enviar candidatura</a><a href="contacto.html#faq">Preguntas frecuentes</a></div>
+  </div>
+  <div class="fine"><span>© 2026 NeoForge Studio S.L. · Pulsa º para abrir la consola</span><span>Empresa, juegos y datos ficticios con fines de demostración.</span></div>
+</div></footer>
+
+<button class="totop" type="button" aria-label="Volver arriba">↑</button>
+<button class="fab" type="button" aria-label="Abrir consola de comandos" aria-expanded="false" aria-controls="console">&gt;_</button>
+<div class="console" id="console" hidden role="dialog" aria-label="Consola de NeoForge">
+  <div class="term-h"><i></i><i></i><i></i><span>neoforge — shell</span><button id="con-x" type="button" aria-label="Cerrar consola">×</button></div>
+  <div class="con-out" id="con-out" aria-live="polite"></div>
+  <form class="con-in" id="con-form" autocomplete="off"><span>~$</span><input id="con-in" aria-label="Comando" placeholder="escribe help" spellcheck="false" autocapitalize="off"></form>
+</div>
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mtitle"><div class="mbox" id="mbox"></div></div>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

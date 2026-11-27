@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Contacto · NeoForge</title>
+<meta name="description" content="Escribe a NeoForge para co-desarrollo, publicación, prensa o empleo.">
+<meta name="theme-color" content="#06080b">
+<meta property="og:title" content="Contacto · NeoForge">
+<meta property="og:description" content="Escribe a NeoForge para co-desarrollo, publicación, prensa o empleo.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2306080b'/%3E%3Cpath d='M16 3 28 10v12L16 29 4 22V10Z' fill='none' stroke='%23ff5a1f' stroke-width='2'/%3E%3Cpath d='M10 20v-7l6 4.5 6-4.5v7' fill='none' stroke='%2336e2ff' stroke-width='2.2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="contacto">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site">
+  <div class="bar">
+    <a class="logo" href="index.html" aria-label="NeoForge, ir al inicio"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 29 9.5v13L16 30 3 22.5v-13Z" fill="none" stroke="#ff5a1f" stroke-width="2"/><path d="M9 20V12l7 5 7-5v8" fill="none" stroke="#36e2ff" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="17" r="1.8" fill="#ffae2b"/></svg>NEO<span>FORGE</span></a>
+    <nav class="main" id="nav" aria-label="Principal">
+      <a href="index.html" data-page="inicio">inicio</a>
+      <a href="quienes-somos.html" data-page="nosotros">quiénes_somos</a>
+      <a href="proyectos.html" data-page="proyectos">proyectos</a>
+      <a href="contacto.html" data-page="contacto">contacto</a>
+    </nav>
+    <button class="hbtn" type="button" data-open-console aria-label="Abrir consola"><span class="lab">consola</span><kbd>º</kbd></button>
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="contenido">
+<section class="band"><div class="wrap">
+  <div class="head">
+    <div><p class="prompt">ssh hola@neoforge</p><h1 class="page-t" data-scramble>Contacto</h1></div>
+    <p class="sub">Co-desarrollo, publicación, prensa o una candidatura. Escríbenos y la persona adecuada del equipo te contestará.</p>
+  </div>
+  <div class="cgrid">
+    <form class="panel" id="form" novalidate>
+      <div class="f"><span class="lbl">motivo del mensaje</span>
+        <div class="seg" role="radiogroup" aria-label="Motivo">
+          <input type="radio" name="motivo" id="m-co" value="Co-desarrollo" checked><label for="m-co">Co-desarrollo</label>
+          <input type="radio" name="motivo" id="m-pub" value="Publicación"><label for="m-pub">Publicación</label>
+          <input type="radio" name="motivo" id="m-prensa" value="Prensa"><label for="m-prensa">Prensa</label>
+          <input type="radio" name="motivo" id="m-empleo" value="Empleo"><label for="m-empleo">Empleo</label>
+          <input type="radio" name="motivo" id="m-otro" value="Otro"><label for="m-otro">Otro</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="f"><label for="nombre">nombre *</label><input id="nombre" name="nombre" autocomplete="name" placeholder="Ana García" aria-describedby="e-nombre"><span class="err" id="e-nombre"></span></div>
+        <div class="f"><label for="email">email *</label><input id="email" name="email" type="email" autocomplete="email" placeholder="ana@estudio.com" aria-describedby="e-email"><span class="err" id="e-email"></span></div>
+      </div>
+      <div class="row">
+        <div class="f"><label for="empresa">empresa</label><input id="empresa" name="empresa" autocomplete="organization" placeholder="Opcional"></div>
+        <div class="f"><label for="plataforma">plataforma principal</label><select id="plataforma" name="plataforma"><option>PC</option><option>PlayStation 5</option><option>Xbox Series</option><option>Nintendo Switch 2</option><option>Multiplataforma</option><option>No aplica</option></select></div>
+      </div>
+      <div class="f"><label for="presu">presupuesto estimado <output id="presu-out" for="presu"></output></label><input id="presu" type="range" min="0" max="4" step="1" value="1"></div>
+      <div class="f"><label for="mensaje">mensaje * <small id="cnt">0/1000</small></label><textarea id="mensaje" name="mensaje" maxlength="1000" placeholder="Cuéntanos tu proyecto, plazos y plataformas..." aria-describedby="e-mensaje"></textarea><span class="err" id="e-mensaje"></span></div>
+      <label class="chk"><input type="checkbox" id="priv"> Acepto la política de privacidad *</label>
+      <span class="err" id="e-priv" style="display:block;margin-bottom:16px"></span>
+      <button class="btn main" type="submit" id="send">Enviar mensaje →</button>
+      <div class="log" id="log" hidden aria-live="polite"></div>
+    </form>
+    <div class="info">
+      <div class="map"><svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs><pattern id="mg" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#16212c"/></pattern>
+  <radialGradient id="mp"><stop offset="0" stop-color="#ff5a1f" stop-opacity=".5"/><stop offset="1" stop-color="#ff5a1f" stop-opacity="0"/></radialGradient></defs>
+  <rect width="400" height="240" fill="#080b0f"/><rect width="400" height="240" fill="url(#mg)"/>
+  <path d="M0 170 C80 150 120 200 200 180 S330 140 400 160 V240 H0Z" fill="#0c1a24"/>
+  <path d="M0 170 C80 150 120 200 200 180 S330 140 400 160" fill="none" stroke="#36e2ff" stroke-opacity=".5"/>
+  <g stroke="#273646" stroke-width="6" fill="none" stroke-linecap="round"><path d="M-10 60 H410"/><path d="M-10 120 H410"/><path d="M90 -10 V250"/><path d="M250 -10 V250"/><path d="M0 0 L330 240"/></g>
+  <g fill="#111a23" stroke="#1b2632"><rect x="110" y="72" width="40" height="36"/><rect x="160" y="20" width="76" height="30"/><rect x="270" y="72" width="54" height="36"/><rect x="20" y="72" width="56" height="36"/><rect x="270" y="10" width="60" height="38"/><rect x="20" y="10" width="56" height="38"/></g>
+  <circle cx="200" cy="92" r="46" fill="url(#mp)"><animate attributeName="r" values="20;52;20" dur="3s" repeatCount="indefinite"/></circle>
+  <path d="M200 64c-12 0-20 9-20 20 0 15 20 32 20 32s20-17 20-32c0-11-8-20-20-20Z" fill="#ff5a1f"/><circle cx="200" cy="84" r="7" fill="#06080b"/>
+  <text x="228" y="80" fill="#e4ecf3" font-family="JetBrains Mono,monospace" font-size="13">NeoForge HQ</text>
+  <text x="228" y="97" fill="#8d9cab" font-family="JetBrains Mono,monospace" font-size="11">39.46°N 0.33°W</text>
+</svg></div>
+      <div class="box"><small>email</small><p class="mono">hola@neoforge.example</p><button class="copy" type="button" data-copy="hola@neoforge.example">copiar</button></div>
+      <div class="box"><small>teléfono</small><p class="mono">+34 900 555 012</p><button class="copy" type="button" data-copy="+34900555012">copiar</button></div>
+      <div class="box"><small>sede central</small><p>Calle del Silicio 42, Distrito Tecnológico<br>46015 Valencia, España</p></div>
+      <div class="box"><small>horario</small><p>Lunes a viernes, 9:00 a 18:00 (hora peninsular)</p><span class="open" id="abierto"></span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="band alt" id="faq"><div class="wrap split top">
+  <div id="faq-h"><p class="prompt">man neoforge --faq</p><h2>Preguntas frecuentes</h2><p class="sub">Lo que más nos preguntan antes de escribirnos. ¿No está tu duda? Abre la consola y escribe <span class="mono" style="color:var(--cy)">help</span>, o mándanos un mensaje.</p><div class="btns"><button class="btn" type="button" data-open-console>Abrir consola &gt;_</button></div></div>
+  <div id="faq-list"></div>
+</div></section>
+</main>
+
+<footer class="site band"><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <a class="logo" href="index.html" style="font-size:22px"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 29 9.5v13L16 30 3 22.5v-13Z" fill="none" stroke="#ff5a1f" stroke-width="2"/><path d="M9 20V12l7 5 7-5v8" fill="none" stroke="#36e2ff" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="17" r="1.8" fill="#ffae2b"/></svg>NEO<span>FORGE</span></a>
+      <p class="sub" style="margin-top:14px;font-size:15px">Estudio independiente de videojuegos con motor propio. Valencia y Madrid.</p>
+      <p class="status" style="margin-top:6px"><i class="dot"></i>todos los servidores en línea</p>
+    </div>
+    <div><h4>estudio</h4><a href="quienes-somos.html">Quiénes somos</a><a href="quienes-somos.html#equipo">Equipo</a><a href="quienes-somos.html#empleo">Empleo</a></div>
+    <div><h4>juegos</h4><a href="proyectos.html">Todos los proyectos</a><a href="proyectos.html#forja">Forja Engine</a><a href="proyectos.html#nyx">NYX PROTOCOL</a></div>
+    <div><h4>contacto</h4><a href="contacto.html">Escríbenos</a><a href="contacto.html#empleo">Enviar candidatura</a><a href="contacto.html#faq">Preguntas frecuentes</a></div>
+  </div>
+  <div class="fine"><span>© 2026 NeoForge Studio S.L. · Pulsa º para abrir la consola</span><span>Empresa, juegos y datos ficticios con fines de demostración.</span></div>
+</div></footer>
+
+<button class="totop" type="button" aria-label="Volver arriba">↑</button>
+<button class="fab" type="button" aria-label="Abrir consola de comandos" aria-expanded="false" aria-controls="console">&gt;_</button>
+<div class="console" id="console" hidden role="dialog" aria-label="Consola de NeoForge">
+  <div class="term-h"><i></i><i></i><i></i><span>neoforge — shell</span><button id="con-x" type="button" aria-label="Cerrar consola">×</button></div>
+  <div class="con-out" id="con-out" aria-live="polite"></div>
+  <form class="con-in" id="con-form" autocomplete="off"><span>~$</span><input id="con-in" aria-label="Comando" placeholder="escribe help" spellcheck="false" autocapitalize="off"></form>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
